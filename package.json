@@ -1,0 +1,31 @@
+{
+  "name": "simple-dao",
+  "version": "1.0.0",
+  "description": "Simplest real estate DAO in the world with ERC-1155",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "simple-dao"
+  },
+  "keywords": [
+    "DAO",
+    "Real",
+    "Estate"
+  ],
+  "author": "Nuno Braz",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.18"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "^1.3.0",
+    "@chainlink/contracts-ccip": "^1.5.0",
+    "@openzeppelin/contracts": "^5.2.0"
+  }
+  
+}
