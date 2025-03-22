@@ -70,7 +70,7 @@ contract RWAGovernor is Governor, GovernorCountingSimple{
         if (votesThreshold > 0) {
             uint256 proposerVotes = getVotes(proposer, clock() - 1); 
             if (proposerVotes < votesThreshold) {
-                revert GovernorInsufficientProposerVotes(proposer, proposerVotes, votesThreshold);
+               revert GovernorInsufficientProposerVotes(proposer, proposerVotes, votesThreshold);
             }
         }
         return _propose(targets, values, calldatas, description, proposer);
@@ -108,7 +108,5 @@ contract RWAGovernor is Governor, GovernorCountingSimple{
         }
         return "mode=blocknumber&from=default";
     }
-
-
 
 }

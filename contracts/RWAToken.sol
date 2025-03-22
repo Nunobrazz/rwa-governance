@@ -14,7 +14,6 @@ contract RWAToken is ERC1155Supply, Ownable {
 
     // Optional mapping for token URIs id to ipfs hash
     mapping(uint256 tokenId => string) private _tokenURIs;
-
     mapping(uint256 tokenId => VotesTokenId) private _votingPower;
 
     event SetIssuer(address indexed issuer);

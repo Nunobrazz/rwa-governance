@@ -21,7 +21,7 @@ async function main(){
     console.log('Lease Period End:', _leasePeriodEnd);
   });
 
-
+  await balances([Alice, Bob, Charlie], rwaToken, tokenId);
 
   await transfer(Alice, Bob, rwaToken, tokenId, 300)
   await transfer(Alice, Charlie, rwaToken, tokenId, 250)

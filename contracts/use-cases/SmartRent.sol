@@ -8,7 +8,6 @@ contract SmartRent is Context, Ownable {
 
   	RWAToken public immutable i_rwaToken;
   	uint256 public immutable i_tokenId;
-
 	address public immutable i_governor;
 
 	address public _tenant;

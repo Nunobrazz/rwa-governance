@@ -172,7 +172,6 @@ export async function votingPower(accounts, rwaToken, tokenId) {
 
 }
 
-
 export async function makeProposal(proposer, governor, targets, values, calldatas, description){
 
   const tx = await governor.connect(proposer).propose(targets, values, calldatas, description);
@@ -187,9 +186,9 @@ export async function makeProposal(proposer, governor, targets, values, calldata
       console.log("Proposal ID:", proposalId);
       console.log("Description:", event.args.description);
       console.log("Targets:", event.args.targets);
-      console.log("Values:", values); // hard to obtain
+      console.log("Values:", values); 
       console.log("Calldatas:", event.args.calldatas);
-      console.log("Signatures:", event.args.signatures);
+      //console.log("Signatures:", event.args.signatures);
       console.log("Vote Start:", Number(event.args.voteStart));
       console.log("Vote End:", Number(event.args.voteEnd));
     }
@@ -202,7 +201,6 @@ export async function getProposalState(governor, proposalId) {
   const state = await governor.state(proposalId)
   console.log("---------- Proposal State:", ProposalState[Number(state)], "----------")
 }
-
 
 export async function castVote(voter, governor, proposalId, support){
 
