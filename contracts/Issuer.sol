@@ -9,7 +9,6 @@ contract Issuer is Ownable {
 
     RWAToken internal immutable i_rwaToken;
 
-    bytes32 internal s_lastRequestId;
     uint256 private s_nextTokenId;
 
     event IssuedAsset(address to, string tokenURI, uint256 tokenId, uint256 amount);
